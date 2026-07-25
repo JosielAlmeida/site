@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --azul: #1877f2;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.ladoDireito {
+    width: 50%;
+    height: 45vw;
+
+
+}
+
+.ladoDireito img {
+    position: absolute;
+    top: 10vh;
+    left: 20vh;
+}
+
+.ladoDireito h1 {
+    position: absolute;
+    top: 28vh;
+    left: 5vh;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#icon {
+    position: absolute;
+    left: 2vw;
+}
+
+.ladoEsquerdo {
+    border: 1px solid black;
+}
+
+.youlove {
+    color: var(--azul);
+}
+
+input[type="text"] {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--azul);
+    box-shadow: 0 0 5px var(--azul);
+}
+
+input[type="text"]:hover {
+    border-color: var(--azul);
+}
+
+input[type="password"] {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--azul);
+    box-shadow: 0 0 5px var(--azul);
+}
+
+input[type="password"]:hover {
+    border-color: var(--azul);
+}
+
+button {
+    background-color: var(--azul);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+}
