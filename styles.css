@@ -27,6 +27,7 @@
 }
 
 .ladoDireito h1 {
+
     position: absolute;
     top: 28vh;
     left: 5vh;
@@ -39,9 +40,7 @@
     left: 2vw;
 }
 
-.ladoEsquerdo {
-    border: 1px solid black;
-}
+
 
 .youlove {
     color: var(--azul);
@@ -92,4 +91,46 @@ button {
     padding: 10px 20px;
     border-radius: 15px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+    #imagem-logo {
+        display: none;
+    }
+
+    #icon {
+        position: absolute;
+        left: 50%;
+    }
+
+    .ladoDireito h1 {
+        display: none;
+
+
+    }
+
+    .ladoEsquerdo {
+        width: 100%;
+        position: absolute;
+        left: 0%;
+        top: 40%;
+
+    }
+
+    .ladoEsquerdo input[type="text"],
+    .ladoEsquerdo input[type="password"] {
+        width: 100%;
+        padding: 5vw;
+        margin-top: 5vw;
+    }
+
+
+    .ladoEsquerdo button {
+        margin-top: 30vw;
+        position: absolute;
+        left: 30%;
+        top: 70%;
+        padding: 5vw 20vw;
+    }
 }
