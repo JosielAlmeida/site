@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+
 * {
+
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -7,6 +10,7 @@
 :root {
     --azul: #1877f2;
 }
+
 
 .container {
     display: grid;
@@ -40,13 +44,21 @@
     left: 2vw;
 }
 
+.ladoDireito .bem-vindo {
+
+    font-size: 50px;
+    font-family: 'Allison', cursive;
+    color: #69b7ed
+}
+
 
 
 .youlove {
     color: var(--azul);
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
     margin-top: 20px;
     border: 1px solid #ccc;
     width: 200px;
@@ -85,12 +97,16 @@ input[type="password"]:hover {
 }
 
 button {
-    background-color: var(--azul);
+    background-color: #367fb3;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 15px;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #2a5d8f;
 }
 
 @media screen and (max-width: 768px) {
@@ -99,15 +115,26 @@ button {
         display: none;
     }
 
-    #icon {
+    #iconlogin {
         position: absolute;
-        left: 50%;
+        left: 22%;
+        animation: moveIcon 2s;
     }
 
     .ladoDireito h1 {
         display: none;
 
 
+    }
+
+    .ladoDireito .bem-vindo {
+        position: absolute;
+        top: 30%;
+        left: 28%;
+        font-size: 40px;
+        font-family: Comic Sans MS, Comic Sans, cursive;
+        color: #3596db;
+        animation: moveIcon 2s infinite;
     }
 
     .ladoEsquerdo {
@@ -120,17 +147,89 @@ button {
 
     .ladoEsquerdo input[type="text"],
     .ladoEsquerdo input[type="password"] {
-        width: 100%;
+        margin-left: 5vw;
+        width: 90%;
         padding: 5vw;
         margin-top: 5vw;
     }
 
 
     .ladoEsquerdo button {
-        margin-top: 30vw;
+        width: 90%;
+        margin: 30vw 10% 0 5%;
         position: absolute;
-        left: 30%;
+        left: 0%;
         top: 70%;
         padding: 5vw 20vw;
+    }
+
+    @keyframes moveIcon {
+        0% {
+            transform: translateY(2px);
+        }
+
+        20% {
+            transform: translateY(-2px);
+        }
+
+        30% {
+            transform: translateY(3px);
+        }
+
+        50% {
+            transform: translateY(-3px);
+        }
+
+    }
+
+    .criar-conta a {
+        text-align: center;
+        width: 90%;
+        text-decoration: none;
+        color: var(--azul);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5%;
+        position: absolute;
+        top: 100%;
+        margin: 35vw 10% 0 5%;
+        padding: 4vw 10vw;
+    }
+
+    /* Estilizando pagina de cadastro */
+
+    #btn-cdt {
+        width: 70%;
+        margin: 30vw 10% 0 5%;
+        position: absolute;
+        left: 10%;
+        top: 70%;
+        padding: 5vw 20vw;
+    }
+
+    .form-cadastro input {
+        width: 90%;
+        left: 5%;
+        position: relative;
+        top: 20vh;
+        margin-top: 1vw 5vw 0 5vw;
+    }
+
+
+
+    #icon {
+        position: absolute;
+        left: 30vw;
+        width: 25vh;
+    }
+
+    .memelogcadastro {
+        margin-top: 2vh;
+        position: absolute;
+        top: 10vh;
+        left: 25%;
+        font-size: 30px;
+        font-family: Comic Sans MS, Comic Sans, cursive;
+        color: #3596db;
+        animation: moveIcon 2s infinite;
     }
 }
