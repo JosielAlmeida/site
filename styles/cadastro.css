@@ -11,74 +11,27 @@
     --azul: #1877f2;
 }
 
+body {
+    padding: 0;
+    margin: 0;
+}
+
 
 .container {
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
-.ladoDireito {
-    width: 50%;
-    height: 45vw;
 
-
-}
-
-.ladoDireito img {
-    position: absolute;
-    top: 10vh;
-    left: 20vh;
-}
-
-.ladoDireito h1 {
-
-    position: absolute;
-    top: 28vh;
-    left: 5vh;
-    font-size: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 #icon {
     position: absolute;
     left: 2vw;
 }
 
-.ladoDireito .bem-vindo {
-
-    font-size: 50px;
-    font-family: 'Allison', cursive;
-    color: #69b7ed
-}
-
-
-
-.youlove {
-    color: var(--azul);
-}
-
-
-input[type="text"]:focus {
-    outline: none;
-    border-color: var(--azul);
-    box-shadow: 0 0 5px var(--azul);
-}
-
-input[type="text"]:hover {
-    border-color: var(--azul);
-}
-
-input[type="email"]:hover {
-    border-color: var(--azul);
-}
-
-input[type="email"]:focus {
-    outline: none;
-    border-color: var(--azul);
-    box-shadow: 0 0 5px var(--azul);
-}
-
-input[type="password"] {
+input[type="password"],
+input[type="text"],
+input[type="email"] {
     margin-top: 20px;
     border: 1px solid #ccc;
     width: 200px;
@@ -87,15 +40,18 @@ input[type="password"] {
     border-radius: 15px;
 }
 
+input[type="text"]:focus,
 input[type="password"]:focus {
     outline: none;
     border-color: var(--azul);
     box-shadow: 0 0 5px var(--azul);
 }
 
+input[type="text"]:hover,
 input[type="password"]:hover {
     border-color: var(--azul);
 }
+
 
 button {
     background-color: #367fb3;
@@ -110,20 +66,16 @@ button:hover {
     background-color: #2a5d8f;
 }
 
-@media screen and (max-width: 768px) {
+#emailerro {
+    color: red;
+    text-align: center;
+    font-size: 3.5vh;
+    margin-bottom: 2%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 790px) {
 
 
-
-
-
-    #btn-cdt {
-        text-align: center;
-        width: 5vh;
-        position: absolute;
-        right: 20%;
-        top: 87%;
-        padding: 2vw 40vw 3vw 24vw;
-    }
 
     #jaPossuiconta {
         text-align: center;
@@ -132,11 +84,16 @@ button:hover {
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
         border-radius: 5%;
         position: absolute;
-        top: 98%;
-        right: 18%;
+        margin-top: 5%;
+        margin-left: 15%;
+        font-size: 3.5vh;
+
+
 
 
     }
+
+
 
 
     @keyframes moveIcon {
@@ -163,18 +120,42 @@ button:hover {
 
 
 
-    .form-cadastro input {
+    #form-cadastro {
+        margin-top: 40%;
         width: 90%;
-        left: 5%;
-        position: relative;
-        top: 20vh;
-        margin-top: 1vw 5vw 0 5vw;
+        margin-left: 10%;
+    }
+
+    #form-cadastro input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 90%
+    }
+
+    #btn-container {
+        height: 10%;
+        width: 90%;
+        margin-top: 3%;
+        position: absolute;
+
+    }
+
+    #btn-cdt {
+        width: 90%;
+        margin-left: 10%;
+        font-size: 3vh;
+
+    }
+
+    #emailerro {
+        margin-bottom: 2vh;
     }
 
 
 
     #icon {
         position: absolute;
+        top: 5%;
         left: 30vw;
         width: 25vh;
     }
@@ -182,8 +163,8 @@ button:hover {
     .memelogcadastro {
         margin-top: 2vh;
         position: absolute;
-        top: 10vh;
-        left: 25%;
+        top: 15vh;
+        left: 30%;
         font-size: 30px;
         font-family: Comic Sans MS, Comic Sans, cursive;
         color: #3596db;
@@ -191,27 +172,13 @@ button:hover {
     }
 }
 
-#teste1 {
-    color: red;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 600px;
-    left: 10px;
-    ;
-    border: 1px solid rgb(46, 46, 211);
-}
 
-#emailerro {
-    color: red;
-    position: absolute;
-    top: 45.9vh;
-    left: 5vw;
-}
+
+
 
 /* Não estilizar abaixo */
 
-@media screen and (min-width: 769px) and (max-width: 1800px) {
+@media screen and (min-width: 790px) and (max-width: 1800px) {
     #imagem-logo {
         display: none;
     }
@@ -311,22 +278,4 @@ button:hover {
         color: #3596db;
         animation: moveIcon 2s infinite;
     }
-}
-
-#teste1 {
-    color: red;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 600px;
-    left: 10px;
-    ;
-    border: 1px solid red;
-}
-
-#emailerro {
-    color: red;
-    position: absolute;
-    top: 45.9vh;
-    left: 5vw;
 }
