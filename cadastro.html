@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/cadastro.css">
     <title>Cadastro MemeLog</title>
 </head>
 
@@ -13,14 +13,33 @@
         <img id="icon" src="img/memelogicon.png" width="200px">
         <h2 class="memelogcadastro">MemeLog</h2>
     </div>
-    <form class="form-cadastro" action="cadastro.php" method="post">
+    <!-- Form de cadastro (display flex) -->
+    <form id="form-cadastro" action="cadastro.php" method="post">
+        <!-- nome -->
         <input type="text" name="nome" placeholder="Nome" required>
+        <!-- snome -->
         <input type="text" name="sobrenome" placeholder="Sobrenome" required>
-        <input type="email" name="email" placeholder="Email" required>
+
+
+        <!-- Email -->
+        <input id="emailcadastro" type="email" name="email" placeholder="Email" required>
+        <!-- Senha -->
         <input type="password" name="senha" placeholder="Senha" required>
+        <!-- confirmar senha -->
         <input type="password" name="confirmar_senha" placeholder="Confirmar Senha" required>
-        <button id="btn-cdt" type="submit">Cadastrar</button>
+
+
     </form>
+    <div id="btn-container">
+        <!-- email mensagem de erro JS -->
+        <p id="emailerro"></p>
+        <!-- Butão de cadastrar -->
+        <button onclick="testeUsuario()" id="btn-cdt" type="submit">Cadastrar</button>
+        <!-- Link para login -->
+        <p id="jaPossuiconta">Já possui uma conta? <a href="login.html">Clique aqui</a></p>
+    </div>
+
+    <script src="/scripts/main.js"></script>
 
 </body>
 
